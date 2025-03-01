@@ -24,9 +24,13 @@ namespace Level
 	public:
 		LevelView();
 
-		void initialize();
-		void initializeBackground();
 
+
+		void initialize();
+		void update();
+		void render();
+		void initializeBackground();
+		void initializeBorder();
 		float getGridWidth();
 		float getGridHeight();
 		void calculateGridExtents();

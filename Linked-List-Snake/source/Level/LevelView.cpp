@@ -27,6 +27,15 @@ namespace Level
         return grid_width;
     }
 
+    void LevelView::render()
+    {
+        //logic
+    }
+
+    void LevelView::update()
+    {
+        //logic
+    }
 
     float LevelView::getGridHeight()
     {
