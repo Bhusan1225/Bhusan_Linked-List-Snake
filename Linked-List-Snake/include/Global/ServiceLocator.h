@@ -17,7 +17,7 @@ namespace Global
         Sound::SoundService* sound_service;
         UI::UIService* ui_service;
         Time::TimeService* time_service;
-    Level::LevelService* level_service;
+        Level::LevelService* level_service;
         
 
         ServiceLocator();

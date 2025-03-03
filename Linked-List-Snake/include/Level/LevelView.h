@@ -22,7 +22,7 @@ namespace Level
 
 
 	public:
-		LevelView();
+		//LevelView();
 
 
 
