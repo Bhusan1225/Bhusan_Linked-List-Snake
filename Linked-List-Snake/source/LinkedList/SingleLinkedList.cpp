@@ -11,7 +11,7 @@ namespace LinkedList
 
 	SingleLinkedList::~SingleLinkedList() = default;
 
-	void SingleLinkedList::initialize(float width, float height, sf::Vector2i position, Direction direction)
+	void SingleLinkedList::initialize(float width, float height, sf::Vector2i position, Player::Direction direction)
 	{
 		node_width = width;
 		node_height = height;

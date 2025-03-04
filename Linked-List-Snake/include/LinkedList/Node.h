@@ -3,11 +3,11 @@
 
 namespace LinkedList
 {
-	using namespace Player;
+	//using namespace Player;
 
 	struct Node
 	{
-		BodyPart body_part;
+		Player::BodyPart body_part;
 		Node* next = nullptr;
 	};
 }

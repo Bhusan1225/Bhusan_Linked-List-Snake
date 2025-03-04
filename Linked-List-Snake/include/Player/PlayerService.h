@@ -1,8 +1,9 @@
 #pragma once
+#include "Player/SnakeController.h"
 
 namespace Player
 {
-	class SnakeController;
+	//class SnakeController;
 
 	class PlayerService
 	{

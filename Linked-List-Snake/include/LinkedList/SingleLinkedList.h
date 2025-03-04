@@ -2,6 +2,7 @@
 #include <SFML/System/Vector2.hpp>
 #include "LinkedList/Node.h"
 
+
 namespace LinkedList
 {
 	class SingleLinkedList
@@ -13,7 +14,7 @@ namespace LinkedList
 		float node_height;
 
 		sf::Vector2i default_position;
-		Direction default_direction;
+		Player::Direction default_direction;
 
 		Node* createNode();
 
@@ -21,7 +22,7 @@ namespace LinkedList
 		SingleLinkedList();
 		~SingleLinkedList();
 
-		void initialize(float width, float height, sf::Vector2i position, Direction direction);
+		void initialize(float width, float height, sf::Vector2i position, Player::Direction direction);
 		void render();
 		void createHeadNode();
 	};

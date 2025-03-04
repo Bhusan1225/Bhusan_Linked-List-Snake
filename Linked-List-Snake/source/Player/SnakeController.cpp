@@ -34,7 +34,11 @@ namespace Player
 		}
 	}
 
-	void SnakeController::render() {}
+	void SnakeController::render() 
+	{
+
+		single_linked_list->render();
+	}
 
 	void SnakeController::processPlayerInput() {}
 
@@ -46,7 +50,10 @@ namespace Player
 
 	void SnakeController::handleRestart() {}
 
-	void SnakeController::spawnSnake() {}
+	void SnakeController::spawnSnake() 
+	{
+		single_linked_list->createHeadNode();
+	}
 
 	void SnakeController::reset() {}
 

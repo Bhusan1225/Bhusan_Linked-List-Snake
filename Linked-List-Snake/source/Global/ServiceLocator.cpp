@@ -85,8 +85,9 @@ namespace Global
 		delete(sound_service);
 		delete(event_service);
 		delete(time_service);
-		delete(level_service);
 		delete(player_service);
+		delete(level_service);
+		
 	}
 
 	ServiceLocator* ServiceLocator::getInstance()

@@ -1,9 +1,11 @@
 #pragma once
 #include "Level/LevelNumber.h"
+#include "Level/LevelController.h"
 
 namespace Level
 {
-	class LevelController;
+   
+	//class LevelController;
 	class LevelService
 	{
 
