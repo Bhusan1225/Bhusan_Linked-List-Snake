@@ -18,7 +18,7 @@ namespace Player
 
 	BodyPart::~BodyPart()
 	{
-		//destroy();
+		destroy();
 	}
 
 	void BodyPart::initialize(float width, float height, sf::Vector2i pos, Direction dir)
@@ -44,5 +44,29 @@ namespace Player
 
 		return sf::Vector2f(x_screen_position, y_screen_position);
 	}
+	void BodyPart::render()
+	{
+		bodypart_image->render();
 
+
+	}
+	float BodyPart::getRotationAngle()
+	{
+		switch (direction)
+		{
+		case Direction::UP:
+			return 270.f;
+		case Direction::DOWN:
+			return 90.f;
+		case Direction::RIGHT:
+			return 0;
+		case Direction::LEFT:
+			return 180.f;
+		}
+	}
+
+	void BodyPart::destroy()
+	{
+		delete (bodypart_image);
+	}
 }

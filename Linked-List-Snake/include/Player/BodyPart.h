@@ -28,7 +28,8 @@ namespace Player
 		void render();
 		void initializeBodyPartImage();
 		sf::Vector2f getBodyPartScreenPosition();
-
+		float getRotationAngle();
+		void setDirection(Direction direction);
 		void destroy();
 	};
 }
