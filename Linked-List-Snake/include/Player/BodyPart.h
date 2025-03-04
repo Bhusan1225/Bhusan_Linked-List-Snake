@@ -23,7 +23,7 @@ namespace Player
 		~BodyPart();
 
 		void initialize(float width, float height, sf::Vector2i pos, Direction dir);
-		void update();
+		//void update();
 		void updatePosition();
 		void render();
 		void initializeBodyPartImage();

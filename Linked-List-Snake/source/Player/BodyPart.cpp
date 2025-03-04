@@ -15,7 +15,10 @@ namespace Player
 		grid_position = sf::Vector2i(0, 0);
 		createBodyPartImage();
 	}
-
+	void BodyPart::createBodyPartImage()
+	{
+		bodypart_image = new ImageView();
+	}
 	BodyPart::~BodyPart()
 	{
 		destroy();
