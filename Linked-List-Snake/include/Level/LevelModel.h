@@ -10,8 +10,8 @@ namespace Level
     private:
         std::vector<LevelData> level_configurations;
 
-        float cell_width;
-        float cell_height;
+        float cell_width ;
+        float cell_height ;
 
     public:
         static const int number_of_rows = 28;

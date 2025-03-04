@@ -4,7 +4,11 @@ namespace Player
 {
 	using namespace LinkedList;
 	using namespace Global;
-	SnakeController::SnakeController() {}
+	SnakeController::SnakeController() 
+	{ 
+		single_linked_list = nullptr; 
+	    createLinkedList();
+	}
 
 	SnakeController::~SnakeController()
 	{
