@@ -30,6 +30,21 @@ namespace Player
 		sf::Vector2f getBodyPartScreenPosition();
 		float getRotationAngle();
 		void setDirection(Direction direction);
+	
+		/// <summary>
+		/// ///////////////////////// intentional error
+		/// </summary>
+
+		sf::Vector2i getNextPosition();
+		sf::Vector2i getNextPositionDown();
+		sf::Vector2i getNextPositionUp();
+		sf::Vector2i getNextPositionRight();
+		sf::Vector2i getNextPositionLeft();
+
+		//////////////////////////////
+
+		Direction getDirection();
+		sf::Vector2i getPosition();
 		void destroy();
 	};
 }
