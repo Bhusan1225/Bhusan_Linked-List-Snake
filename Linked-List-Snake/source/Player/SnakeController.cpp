@@ -44,7 +44,7 @@ namespace Player
 
 	void SnakeController::updateSnakeDirection() {}
 
-	void SnakeController::moveSnake() {}
+	void SnakeController::moveSnake() { single_linked_list->updateNodePosition(); }
 
 	void SnakeController::processSnakeCollision() {}
 

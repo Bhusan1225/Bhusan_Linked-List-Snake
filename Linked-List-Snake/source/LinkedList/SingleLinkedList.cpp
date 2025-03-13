@@ -39,7 +39,16 @@ namespace LinkedList
 		head_node->body_part.initialize(node_width, node_height, default_position, default_direction);
 		return;
 	}*/ ////////////////////////////////////////////////////////////////////////////////////////////////////////said in content to remove the createHeadNode
+	void SingleLinkedList::updateNodePosition()
+	{
+		Node* cur_node = head_node;
 
+		while (cur_node != nullptr)
+		{
+			cur_node->body_part.updatePosition();
+			cur_node = cur_node->next;
+		}
+	}
 	sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node) /// this function will be call later in InitialNode function here only
 	{
 		// Extract direction and position for new node calculation
