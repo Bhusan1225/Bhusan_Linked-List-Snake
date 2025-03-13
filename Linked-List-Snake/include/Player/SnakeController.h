@@ -24,7 +24,7 @@ namespace Player
 		SnakeState current_snake_state;
 		Direction current_snake_direction;
 		float elapsed_duration;
-
+		float restart_counter;
 		void processPlayerInput();
 
 		void updateSnakeDirection();

@@ -57,6 +57,16 @@ namespace LinkedList
 		cur_node->next = nullptr;
 		delete (cur_node);
 	}
+
+	void SingleLinkedList::removeAllNodes()
+	{
+		if (head_node == nullptr) return;
+
+		while (head_node != nullptr)
+		{
+			removeNodeAtHead();
+		}
+	}
 	void SingleLinkedList::updateNodeDirection(Player::Direction direction_to_set)
 	{
 		Node* cur_node = head_node;
