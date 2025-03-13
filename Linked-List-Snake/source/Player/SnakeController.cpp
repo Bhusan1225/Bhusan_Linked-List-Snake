@@ -93,13 +93,7 @@ namespace Player
 		}
 	}
 
-	void SnakeController::reset()
-	{
-		current_snake_state = SnakeState::ALIVE;
-		current_snake_direction = default_direction;
-		elapsed_duration = 0.0f;
-		restart_counter = 0.0f;
-	}
+	
 	
 
 	void SnakeController::processSnakeCollision()
