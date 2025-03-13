@@ -25,6 +25,7 @@ namespace Player
 		Direction current_snake_direction;
 
 		void processPlayerInput();
+
 		void updateSnakeDirection();
 		void moveSnake();
 		void processSnakeCollision();
