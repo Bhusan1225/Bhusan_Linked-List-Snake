@@ -1,9 +1,15 @@
 #include "Level/LevelService.h"
-#include " ../../../include/Global/ServiceLocator.h"
+#include "Level/LevelController.h"
+#include "Global/ServiceLocator.h"
+#include "Element/ElementService.h"
+//#include "Food/FoodService.h"
+#include "Level/LevelModel.h"
 
 namespace Level
 {
 	using namespace Global;
+	using namespace Element;
+	//using namespace Food;
 
 	LevelService::LevelService()
 	{
@@ -40,17 +46,9 @@ namespace Level
 	void LevelService::createLevel(LevelNumber level_to_load)
 	{
 		current_level = level_to_load;
+		spawnLevelElements(level_to_load);
+		spawnFood();
 		spawnPlayer();
-	}
-
-	void LevelService::destroy()
-	{
-		delete level_controller;
-	}
-
-	void LevelService::spawnPlayer()
-	{
-		ServiceLocator::getInstance()->getPlayerService()->spawnPlayer();
 	}
 
 	float LevelService::getCellWidth()
@@ -63,4 +61,37 @@ namespace Level
 		return level_controller->getCellHeight();
 	}
 
+	LevelNumber LevelService::getCurrentLevel()
+	{
+		return current_level;
+	}
+
+	void LevelService::spawnPlayer()
+	{
+		ServiceLocator::getInstance()->getPlayerService()->spawnPlayer();
+	}
+
+	void LevelService::spawnLevelElements(LevelNumber level_to_load)
+	{
+		current_level = level_to_load;
+
+		float cell_width = level_controller->getCellWidth();
+		float cell_height = level_controller->getCellHeight();
+
+		std::vector<ElementData> element_data_list = level_controller->getElementDataList((int)level_to_load);
+		ServiceLocator::getInstance()->getElementService()->spawnElements(element_data_list, cell_width, cell_height);
+	}
+
+	void LevelService::spawnFood()
+	{
+		float cell_width = level_controller->getCellWidth();
+		float cell_height = level_controller->getCellHeight();
+
+		//ServiceLocator::getInstance()->getFoodService()->startFoodSpawning();
+	}
+
+	void LevelService::destroy()
+	{
+		delete level_controller;
+	}
 }

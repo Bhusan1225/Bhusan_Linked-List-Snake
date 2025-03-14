@@ -9,9 +9,12 @@ namespace Level
     {
     private:
         std::vector<LevelData> level_configurations;
-
+        //std::vector<Element::ElementData> level_one_element_list = {};
         float cell_width ;
         float cell_height ;
+
+        std::vector<Element::ElementData> level_one_element_list;
+        std::vector<Element::ElementData> level_two_element_list;
 
     public:
         static const int number_of_rows = 28;
@@ -21,8 +24,9 @@ namespace Level
         ~LevelModel();
 
         void initialize(int width, int height);
-
+        const std::vector<Element::ElementData>& getElementDataList(int level_to_load);
         float getCellWidth();
         float getCellHeight();
+        void initializeLevelData();
     };
 }
