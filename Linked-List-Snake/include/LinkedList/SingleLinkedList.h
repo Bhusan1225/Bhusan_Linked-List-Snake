@@ -30,8 +30,10 @@ namespace LinkedList
 		void updateNodePosition();
 		void updateNodeDirection(Player::Direction direction_to_set);
 		void insertNodeAtTail();
+		void insertNodeAtHead();
 		void removeNodeAtHead();
 		void removeAllNodes();
+		//std::vector<sf::Vector2i> getNodesPositionList();
 		bool processNodeCollision();
 	};
 }

@@ -1,5 +1,7 @@
 #include "Player/SnakeController.h"
 #include "Global/ServiceLocator.h"
+#include <iostream>
+
 namespace Player
 {
 	using namespace LinkedList;
@@ -24,17 +26,15 @@ namespace Player
 		{
 		case SnakeState::ALIVE:
 			processPlayerInput();
-			updateSnakeDirection();
-			processSnakeCollision();
-			moveSnake();
+			delayedUpdate();
 			break;
 
 		case SnakeState::DEAD:
 			handleRestart();
-
 			break;
 		}
 	}
+
 	void SnakeController::moveSnake() 
 	{ 
 		single_linked_list->updateNodePosition(); 
@@ -74,7 +74,10 @@ namespace Player
 		}
 	}
 
-	void SnakeController::updateSnakeDirection() { single_linked_list->updateNodeDirection(current_snake_direction); }
+	void SnakeController::updateSnakeDirection()
+	{
+		single_linked_list->updateNodeDirection(current_snake_direction);
+	}
 	
 	void SnakeController::delayedUpdate()
 	{
@@ -86,9 +89,12 @@ namespace Player
 			updateSnakeDirection();
 			processSnakeCollision();
 
-			if (current_snake_state != SnakeState::DEAD)
+			if (current_snake_state != SnakeState::DEAD) 
+			{
 				moveSnake();
-
+				std::cout << "snake is moving\n";
+			}
+				
 			current_input_state = InputState::WAITING;
 		}
 	}
@@ -108,9 +114,12 @@ namespace Player
 
 	void SnakeController::spawnSnake() 
 	{
-		for (int i = 0; i < initial_snake_length; i++) {
+		for (int i = 0; i < initial_snake_length; i++) 
+		{
+
 			single_linked_list->insertNodeAtTail();     // Insert nodes at tail to create the initial snake
 		}
+		//current_snake_state = SnakeState::ALIVE;
 	}
 
 	void SnakeController::reset()
@@ -122,7 +131,10 @@ namespace Player
 		current_input_state = InputState::WAITING;
 	}
 
-	
+	/*std::vector<sf::Vector2i> SnakeController::getCurrentSnakePositionList()
+	{
+		return single_linked_list->getNodesPositionList();
+	}*/
 
 	void SnakeController::setSnakeState(SnakeState state)
 	{
@@ -161,5 +173,5 @@ namespace Player
 			respawnSnake();
 		}
 	}
-	void SnakeController::destroy() {}
+	void SnakeController::destroy() { delete (single_linked_list); }
 }

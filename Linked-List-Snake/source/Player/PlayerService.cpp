@@ -1,5 +1,5 @@
 #include "Player/PlayerService.h"
-//#include "Player/SnakeController.h"
+#include "Player/SnakeController.h"
 
 namespace Player
 {
@@ -39,7 +39,7 @@ namespace Player
 	{
 		snake_controller->spawnSnake();
 	}
-
+	
 	void PlayerService::destroy()
 	{
 		delete (snake_controller);

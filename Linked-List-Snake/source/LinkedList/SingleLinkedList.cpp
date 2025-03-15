@@ -27,7 +27,22 @@ namespace LinkedList
 			cur_node = cur_node->next;
 		}
 	}
+	//void SingleLinkedList::insertNodeAtHead()
+	//{
+	//	Node* new_node = createNode();
+	//	linked_list_size++;
 
+	//	if (head_node == nullptr)
+	//	{
+	//		head_node = new_node;
+	//		initializeNode(new_node, nullptr, Operation::HEAD);
+	//		return;
+	//	}
+
+	//	initializeNode(new_node, head_node, Operation::HEAD);
+	//	new_node->next = head_node;
+	//	head_node = new_node;
+	//}
 	Node* SingleLinkedList::createNode()
 	{
 		return new Node();
@@ -79,6 +94,21 @@ namespace LinkedList
 			cur_node = cur_node->next;
 		}
 	}
+
+	//std::vector<sf::Vector2i> SingleLinkedList::getNodesPositionList()
+	//{
+	//	std::vector<sf::Vector2i> nodes_position_list;
+
+	//	Node* cur_node = head_node;
+
+	//	while (cur_node != nullptr)
+	//	{
+	//		nodes_position_list.push_back(cur_node->body_part.getPosition());
+	//		cur_node = cur_node->next;
+	//	}
+
+	//	return nodes_position_list;
+	//}
 	sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node) /// this function will be call later in InitialNode function here only
 	{
 		// Extract direction and position for new node calculation

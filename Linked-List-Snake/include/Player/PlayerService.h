@@ -1,9 +1,9 @@
 #pragma once
-#include "Player/SnakeController.h"
+
 
 namespace Player
 {
-	//class SnakeController;
+	class SnakeController;
 
 	class PlayerService
 	{
@@ -20,7 +20,7 @@ namespace Player
 		void initialize();
 		void update();
 		void render();
-
+		//int getSnakeSize();
 		void spawnPlayer();
 	};
 }
