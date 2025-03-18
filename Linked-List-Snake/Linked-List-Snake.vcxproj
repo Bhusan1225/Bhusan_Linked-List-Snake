@@ -133,6 +133,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Food\FoodService.cpp" />
+    <ClCompile Include="source\Food\FoodItem.cpp" />
     <ClCompile Include="source\Element\ElementService.cpp" />
     <ClCompile Include="source\Element\Obstacle.cpp" />
     <ClCompile Include="source\LinkedList\SingleLinkedList.cpp" />
@@ -165,6 +167,9 @@
     <ClCompile Include="source\UI\UIElement\UIView.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Food\FoodService.h" />
+    <ClInclude Include="include\Food\FoodItem.h" />
+    <ClInclude Include="include\Food\FoodType.h" />
     <ClInclude Include="include\Element\ElementService.h" />
     <ClInclude Include="include\Element\ElementData.h" />
     <ClInclude Include="include\Player\BodyPart.h" />
