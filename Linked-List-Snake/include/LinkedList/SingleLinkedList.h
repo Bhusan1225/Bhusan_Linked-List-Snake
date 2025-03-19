@@ -22,7 +22,7 @@ namespace LinkedList
 
 		sf::Vector2i default_position;
 		Player::Direction default_direction;
-
+		int linked_list_size;
 		Node* createNode();
 
 	public:
