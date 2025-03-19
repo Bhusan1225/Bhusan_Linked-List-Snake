@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
+#include "LinkedList/Node.h"
 #include "LinkedList/SingleLinkedList.h"
+#include "Food/FoodType.h"
 
 
 
@@ -42,7 +44,7 @@ namespace Player
 		void reset();
 		void destroy();
 		void createLinkedList();
-
+		void OnFoodCollected(Food::FoodType food_type);
 	public:
 		SnakeController();
 		~SnakeController();
@@ -60,5 +62,6 @@ namespace Player
 		void processBodyCollision();
 		void processElementsCollision();
 		void processFoodCollision();
+		
 	};
 }

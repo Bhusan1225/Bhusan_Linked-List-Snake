@@ -135,6 +135,11 @@ namespace LinkedList
 
 		return default_position;
 	}
+
+	Node* SingleLinkedList::getHeadNode()
+	{
+		return head_node;
+	}
 	bool SingleLinkedList::processNodeCollision()
 	{
 		if (head_node == nullptr) return false;
