@@ -299,4 +299,6 @@ namespace LinkedList
 
 		new_node->body_part.initialize(node_width, node_height, position, reference_node->body_part.getDirection());
 	}
+
+	
 }
