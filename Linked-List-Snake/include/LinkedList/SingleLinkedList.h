@@ -44,7 +44,7 @@ namespace LinkedList
 		std::vector<sf::Vector2i> getNodesPositionList();
 		bool processNodeCollision();
 		Node* getHeadNode();
-
+		
 		void initializeNode(Node* new_node, Node* reference_node, Operation operation);
 	};
 }
