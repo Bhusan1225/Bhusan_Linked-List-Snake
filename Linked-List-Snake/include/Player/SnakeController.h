@@ -57,5 +57,8 @@ namespace Player
 		std::vector<sf::Vector2i> getCurrentSnakePositionList();
 		SnakeState getSnakeState();
 		void delayedUpdate();
+		void processBodyCollision();
+		void processElementsCollision();
+		void processFoodCollision();
 	};
 }

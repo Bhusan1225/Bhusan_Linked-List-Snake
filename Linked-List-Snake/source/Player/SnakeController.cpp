@@ -1,12 +1,15 @@
 #include "Player/SnakeController.h"
 #include "Global/ServiceLocator.h"
 #include <iostream>
+#include "Event/EventService.h"
 
 namespace Player
 {
 	using namespace LinkedList;
 	using namespace Global;
 	using namespace Event;
+	using namespace Sound;
+
 	SnakeController::SnakeController() 
 	{ 
 		single_linked_list = nullptr; 
@@ -100,7 +103,22 @@ namespace Player
 	}
 
 	
-	
+	void SnakeController::processBodyCollision()
+	{
+		if (single_linked_list->processNodeCollision())
+		{
+			current_snake_state = SnakeState::DEAD;
+			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::DEATH);
+		}
+	}
+
+	void SnakeController::processElementsCollision()
+	{
+	}
+
+	void SnakeController::processFoodCollision()
+	{
+	}
 
 	void SnakeController::processSnakeCollision()
 	{
