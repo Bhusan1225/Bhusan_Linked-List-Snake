@@ -42,7 +42,7 @@ namespace Player
 		sf::Vector2i getNextPositionLeft();
 
 		//////////////////////////////
-
+		sf::Vector2i getPrevPosition();
 		Direction getDirection();
 		sf::Vector2i getPosition();
 		void destroy();
