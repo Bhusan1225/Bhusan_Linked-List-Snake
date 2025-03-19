@@ -32,7 +32,8 @@ namespace LinkedList
 		void initialize(float width, float height, sf::Vector2i position, Player::Direction direction);
 		void render();
 		//void createHeadNode();
-
+		Player::Direction reverse();
+		Player::Direction getReverseDirection(Player::Direction reference_direction);
 		sf::Vector2i getNewNodePosition(Node* reference_node);
 		void updateNodePosition();
 		void updateNodeDirection(Player::Direction direction_to_set);
@@ -51,6 +52,8 @@ namespace LinkedList
 		void removeHalfNodes();
 		void insertNodeAtIndex(int index);
 		Node* findNodeAtIndex(int index);
+
+		void reverseNodeDirections();
 	};
 }
 
