@@ -48,8 +48,9 @@ namespace LinkedList
 		void insertNodeAtMiddle();
 		void shiftNodesAfterInsertion(Node* new_node, Node* cur_node, Node* prev_node);
 		void initializeNode(Node* new_node, Node* reference_node, Operation operation);
-
+		void removeHalfNodes();
 		void insertNodeAtIndex(int index);
+		Node* findNodeAtIndex(int index);
 	};
 }
 
