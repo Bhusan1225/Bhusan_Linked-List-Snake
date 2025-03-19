@@ -40,6 +40,7 @@ namespace LinkedList
 		void insertNodeAtTail();
 		void insertNodeAtHead();
 		void removeNodeAtHead();
+		void removeNodeAtTail();
 		void removeAllNodes();
 		std::vector<sf::Vector2i> getNodesPositionList();
 		bool processNodeCollision();
