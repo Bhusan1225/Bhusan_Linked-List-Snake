@@ -157,7 +157,23 @@ namespace LinkedList
 	}
 
 
+	void SingleLinkedList::shiftNodesAfterInsertion(Node* new_node, Node* cur_node, Node* prev_node)
+	{
+		Node* next_node = cur_node;
+		cur_node = new_node;
 
+		while (cur_node != nullptr && next_node != nullptr)
+		{
+			cur_node->body_part.setPosition(next_node->body_part.getPosition());
+			cur_node->body_part.setDirection(next_node->body_part.getDirection());
+
+			prev_node = cur_node;
+			cur_node = next_node;
+			next_node = next_node->next;
+		}
+
+		initializeNode(cur_node, prev_node, Operation::TAIL);
+	}
 	
 	void SingleLinkedList::insertNodeAtTail()
 	{
