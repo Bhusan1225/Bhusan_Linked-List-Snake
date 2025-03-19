@@ -1,11 +1,12 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
+#include "Food/FoodType.h" // I added due to getting error in the food type in .cpp file 
 #include <random>
 #include <vector>
 
 namespace Food
 {
-	enum class FoodType;
+	//enum class FoodType; // earlier it was the forward declaration 
 	class FoodItem;
 
 	class FoodService

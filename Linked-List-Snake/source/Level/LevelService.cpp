@@ -49,6 +49,7 @@ namespace Level
 		spawnLevelElements(level_to_load);
 		spawnFood();
 		spawnPlayer();
+		
 	}
 
 	float LevelService::getCellWidth()
