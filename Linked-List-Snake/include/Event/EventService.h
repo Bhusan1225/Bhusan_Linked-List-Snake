@@ -27,6 +27,9 @@ namespace Event
 		void updateMouseButtonsState(ButtonState& current_button_state, sf::Mouse::Button mouse_button);
 
 	public:
+
+		
+
 		EventService();
 		~EventService();
 
@@ -41,5 +44,7 @@ namespace Event
 		bool pressedDownArrowKey();
 		bool pressedLeftMouseButton();
 		bool pressedRightMouseButton();
+		////////////////////////////////////////////////////////////////////
+		
 	};
 }
