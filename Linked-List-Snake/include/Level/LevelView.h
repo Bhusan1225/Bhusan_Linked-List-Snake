@@ -12,7 +12,9 @@ namespace Level
 
         UI::UIElement::RectangleShapeView* background_rectangle;
         UI::UIElement::RectangleShapeView* border_rectangle;
-
+       
+       
+        
         float grid_width;
         float grid_height;
 
@@ -25,8 +27,8 @@ namespace Level
     public:
         static const int border_thickness = 10;
         static const int border_offset_left = 40;
-        static const int border_offset_top = 40;
-        //static const int border_offset_bottom = 40;
+        static const int border_offset_top = 100;
+        static const int border_offset_bottom = 40;
 
         LevelView();
         ~LevelView();
@@ -34,6 +36,8 @@ namespace Level
         void initialize();
         void update();
         void render();
+
+      
 
         float getGridWidth();
         float getGridHeight();

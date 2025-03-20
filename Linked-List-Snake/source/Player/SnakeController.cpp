@@ -153,6 +153,7 @@ namespace Player
 
 	void SnakeController::reset()
 	{
+		player_score = 0;
 		current_snake_state = SnakeState::ALIVE;
 		current_snake_direction = default_direction;
 		elapsed_duration = 0.f;
@@ -176,16 +177,32 @@ namespace Player
 
 	void SnakeController::processFoodCollision()
 	{
+		
 		FoodService* food_service = ServiceLocator::getInstance()->getFoodService();
 		FoodType food_type;
 
 		if (food_service->processFoodCollision(single_linked_list->getHeadNode(), food_type))
 		{
 			ServiceLocator::getInstance()->getSoundService()->playSound(SoundType::PICKUP);
-
+			
 			food_service->destroyFood();
 			OnFoodCollected(food_type);
+			player_score++;
 		}
+	}
+	int SnakeController::getPlayerScore()
+	{
+		return player_score;
+	}
+
+	TimeComplexity SnakeController::getTimeComplexity()
+	{
+		return time_complexity;
+	}
+
+	LinkedListOperations SnakeController::getLastOperation()
+	{
+		return last_linked_list_operation;
 	}
 
 	void SnakeController::OnFoodCollected(FoodType food_type)

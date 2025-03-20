@@ -24,7 +24,10 @@ namespace Player
 	{
 		snake_controller->initialize();
 	}
-
+	int PlayerService::getPlayerScore()
+	{
+		return snake_controller->getPlayerScore();
+	}
 	void PlayerService::update()
 	{
 		snake_controller->update();
@@ -39,12 +42,20 @@ namespace Player
 	{
 		snake_controller->spawnSnake();
 	}
+	
+	TimeComplexity PlayerService::getTimeComplexity()
+	{
+		return snake_controller->getTimeComplexity();
+	}
 
 	std::vector<sf::Vector2i> PlayerService::getCurrentSnakePositionList()
 	{
 		return snake_controller->getCurrentSnakePositionList();
 	}
-
+	LinkedListOperations PlayerService::getLastOperation()
+	{
+		return snake_controller->getLastOperation();
+	}
 	void PlayerService::destroy()
 	{
 		delete (snake_controller);

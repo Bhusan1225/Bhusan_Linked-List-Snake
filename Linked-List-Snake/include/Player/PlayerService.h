@@ -1,4 +1,4 @@
-#pragma once
+
 #pragma once
 #include <vector>
 #include <SFML/System/Vector2.hpp>
@@ -21,9 +21,12 @@ namespace Player
 		~PlayerService();
 
 		void initialize();
+		int getPlayerScore();
 		void update();
 		void render();
 		//int getSnakeSize();
+		TimeComplexity getTimeComplexity();
+		LinkedListOperations getLastOperation();
 		std::vector<sf::Vector2i> getCurrentSnakePositionList();
 		void spawnPlayer();
 	};
