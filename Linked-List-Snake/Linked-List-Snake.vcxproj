@@ -133,6 +133,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\LinkedListLib\DoubleNode.cpp" />
+    <ClCompile Include="include\LinkedListLib\SingleNode.h" />
     <ClCompile Include="source\UI\Gameplay UI\GameplayUIController.cpp" />
     <ClCompile Include="source\Food\FoodService.cpp" />
     <ClCompile Include="source\Food\FoodItem.cpp" />
@@ -178,7 +180,7 @@
     <ClInclude Include="include\Level\LevelData.h" />
     <ClInclude Include="include\Level\LevelNumber.h" />
     <ClInclude Include="include\Player\Direction.h" />
-    <ClInclude Include="include\LinkedList\Node.h" />
+    <ClInclude Include="include\LinkedListLib\Node.h" />
     <ClInclude Include="include\Time\TimeService.h" />
     <ClInclude Include="include\UI\Credits\CreditsScreenUIController.h" />
     <ClInclude Include="include\UI\Instructions\InstructionsScreenUIController.h" />
@@ -205,7 +207,7 @@
     <ClInclude Include="include\UI\LevelSelection\LevelSelectionUIController.h" />
     <ClInclude Include="include\Player\PlayerService.h" />
     <ClInclude Include="include\Player\SnakeController.h" />
-    <ClInclude Include="include\LinkedList\SingleLinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\SingleLinkedList.h" />
     <ClInclude Include="include\Element\Obstacle.h" />
   </ItemGroup>
   <ItemGroup>

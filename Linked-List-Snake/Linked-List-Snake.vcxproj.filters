@@ -114,6 +114,12 @@
     <ClCompile Include="source\UI\Gameplay UI\GameplayUIController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="include\LinkedListLib\SingleNode.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\LinkedListLib\DoubleNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Main\GameService.h">
@@ -206,10 +212,10 @@
     <ClInclude Include="include\Player\BodyPart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LinkedList\Node.h">
+    <ClInclude Include="include\LinkedListLib\Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\LinkedList\SingleLinkedList.h">
+    <ClInclude Include="include\LinkedListLib\SingleLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Element\ElementService.h">

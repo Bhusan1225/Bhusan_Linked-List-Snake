@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
-#include "LinkedList/Node.h"
+#include "../../include/LinkedListLib/Node.h"
 
 
 namespace LinkedList
