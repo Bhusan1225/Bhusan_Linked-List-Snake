@@ -1,63 +1,38 @@
 #pragma once
 #include <SFML/System/Vector2.hpp>
-#include "../../include/LinkedListLib/Node.h"
+#include "LinkedListLib/Node.h"
+#include "LinkedListLib/LinkedList.h"
 
-
-namespace LinkedList
+namespace LinkedListLib
 {
-	enum class Operation
+	namespace SingleLinked
 	{
-		HEAD,
-		MID,
-		TAIL,
-	};
+		class SingleLinkedList : public LinkedList
+		{
+		protected:
+			virtual Node* createNode() override;
 
-	class SingleLinkedList
-	{
-	private:
-		Node* head_node;
+		public:
+			SingleLinkedList();
+			~SingleLinkedList();
 
-		float node_width;
-		float node_height;
 
-		sf::Vector2i default_position;
-		Player::Direction default_direction;
-		int linked_list_size;
-		Node* createNode();
-		int findMiddleNode();
-	public:
-		SingleLinkedList();
-		~SingleLinkedList();
+			void insertNodeAtTail() override;
+			void insertNodeAtHead() override;
+			void insertNodeAtMiddle() override;
+			void insertNodeAtIndex(int index) override;
+			void shiftNodesAfterInsertion(Node* new_node, Node* cur_node, Node* prev_node);
 
-		void initialize(float width, float height, sf::Vector2i position, Player::Direction direction);
-		void render();
-		//void createHeadNode();
-		Player::Direction reverse();
-		Player::Direction getReverseDirection(Player::Direction reference_direction);
-		sf::Vector2i getNewNodePosition(Node* reference_node);
-		void updateNodePosition();
-		void updateNodeDirection(Player::Direction direction_to_set);
-		sf::Vector2i getNewNodePosition(Node* reference_node, Operation operation);
-		void insertNodeAtTail();
-		void insertNodeAtHead();
-		void removeNodeAtHead();
-		void removeNodeAtTail();
-		void removeNodeAtMiddle();
-		void removeNodeAtIndex(int index);
-		void removeAllNodes();
-		std::vector<sf::Vector2i> getNodesPositionList();
-		bool processNodeCollision();
-		Node* getHeadNode();
-		void insertNodeAtMiddle();
-		void shiftNodesAfterInsertion(Node* new_node, Node* cur_node, Node* prev_node);
-		void initializeNode(Node* new_node, Node* reference_node, Operation operation);
-		void removeHalfNodes();
-		void insertNodeAtIndex(int index);
-		Node* findNodeAtIndex(int index);
-		void removeNodeAt(int index);
-		void reverseNodeDirections();
-		void shiftNodesAfterRemoval(Node* cur_node);
-	};
+			void removeNodeAtTail() override;
+			void removeNodeAtHead() override;
+			void removeNodeAtMiddle() override;
+			void removeNodeAt(int index) override;
+			void removeNodeAtIndex(int index);
+			void removeAllNodes() override;
+			void removeHalfNodes() override;
+			void shiftNodesAfterRemoval(Node* cur_node);
+
+			Direction reverse() override;
+		};
+	}
 }
-
-

@@ -133,14 +133,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\LinkedListLib\DoubleNode.cpp" />
-    <ClCompile Include="include\LinkedListLib\SingleNode.h" />
+    <ClCompile Include="source\LinkedListLib\DoubleLinkedList.cpp" />
+    <ClCompile Include="include\LinkedListLib\DoubleLinked\DoubleNode.cpp" />
+    <ClCompile Include="include\LinkedListLib\SingleLinked\SingleNode.h" />
+    <ClCompile Include="source\LinkedListLib\LinkedList.cpp" />
     <ClCompile Include="source\UI\Gameplay UI\GameplayUIController.cpp" />
     <ClCompile Include="source\Food\FoodService.cpp" />
     <ClCompile Include="source\Food\FoodItem.cpp" />
     <ClCompile Include="source\Element\ElementService.cpp" />
     <ClCompile Include="source\Element\Obstacle.cpp" />
-    <ClCompile Include="source\LinkedList\SingleLinkedList.cpp" />
+    <ClCompile Include="source\LinkedListLib\SingleLinkedList.cpp" />
     <ClCompile Include="source\Player\BodyPart.cpp" />
     <ClCompile Include="source\Player\PlayerService.cpp" />
     <ClCompile Include="source\Player\SnakeController.cpp" />
@@ -170,6 +172,7 @@
     <ClCompile Include="source\UI\UIElement\UIView.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\LinkedListLib\DoubleLinked\DoubleLinkedList.h" />
     <ClInclude Include="include\UI\GameplayUI\GameplayUIController.h" />
     <ClInclude Include="include\Food\FoodService.h" />
     <ClInclude Include="include\Food\FoodItem.h" />
@@ -207,8 +210,9 @@
     <ClInclude Include="include\UI\LevelSelection\LevelSelectionUIController.h" />
     <ClInclude Include="include\Player\PlayerService.h" />
     <ClInclude Include="include\Player\SnakeController.h" />
-    <ClInclude Include="include\LinkedListLib\SingleLinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\SingleLinked\SingleLinkedList.h" />
     <ClInclude Include="include\Element\Obstacle.h" />
+    <ClInclude Include="include\LinkedListLib\LinkedList.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="assets\sounds\background_music.mp3" />
