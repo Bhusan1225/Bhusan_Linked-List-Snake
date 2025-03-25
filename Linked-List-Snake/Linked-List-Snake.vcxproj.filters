@@ -117,7 +117,7 @@
     <ClCompile Include="include\LinkedListLib\SingleLinked\SingleNode.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\LinkedListLib\DoubleLinked\DoubleNode.cpp">
+    <ClCompile Include="include\LinkedListLib\DoubleLinked\DoubleNode.h">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\LinkedListLib\LinkedList.cpp">

@@ -134,7 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\LinkedListLib\DoubleLinkedList.cpp" />
-    <ClCompile Include="include\LinkedListLib\DoubleLinked\DoubleNode.cpp" />
+    <ClCompile Include="include\LinkedListLib\DoubleLinked\DoubleNode.h" />
     <ClCompile Include="include\LinkedListLib\SingleLinked\SingleNode.h" />
     <ClCompile Include="source\LinkedListLib\LinkedList.cpp" />
     <ClCompile Include="source\UI\Gameplay UI\GameplayUIController.cpp" />
