@@ -55,6 +55,13 @@ namespace Event
             current_button_state = ButtonState::RELEASED;
         }
     }
+    //bool EventService::pressedLeftArrowKey();
+
+    //bool EventService::pressedRightArrowKey();
+
+    //bool EventService::pressedUpArrowKey();
+
+    //bool EventService::pressedDownArrowKey();
 
     bool EventService::isGameWindowOpen() { return game_window != nullptr; }
 
@@ -65,7 +72,8 @@ namespace Event
     bool EventService::isKeyboardEvent() { return game_event.type == sf::Event::KeyPressed; }
 
     bool EventService::pressedEscapeKey() { return game_event.key.code == sf::Keyboard::Escape; }
-
+    
+    ///////////////////////////////////////////////////////////////////////
     bool EventService::pressedLeftArrowKey() { return (isKeyboardEvent() && game_event.key.code == sf::Keyboard::Left); }
 
     bool EventService::pressedRightArrowKey() { return  (isKeyboardEvent() && game_event.key.code == sf::Keyboard::Right); }
@@ -73,7 +81,7 @@ namespace Event
     bool EventService::pressedUpArrowKey() { return  (isKeyboardEvent() && game_event.key.code == sf::Keyboard::Up); }
 
     bool EventService::pressedDownArrowKey() { return  (isKeyboardEvent() && game_event.key.code == sf::Keyboard::Down); }
-
+    ///////////////////////////////////////////////////////////////////////
     bool EventService::pressedLeftMouseButton() { return left_mouse_button_state == ButtonState::PRESSED; }
 
     bool EventService::pressedRightMouseButton() { return right_mouse_button_state == ButtonState::PRESSED; }
